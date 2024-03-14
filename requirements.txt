@@ -1,0 +1,7 @@
+transformers
+langchain
+requests
+streamlit
+openai==0.28
+python-dotenv
+tensorflow
