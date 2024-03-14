@@ -41,7 +41,7 @@ def image_to_text(image_url):
 #gpt-3.5-turbo-instruct
 #gpt-3.5-turbo-instruct-0914
 #llm
-def text_to_story(text, model='gpt-3.5-turbo-instruct', temperature=0.9):
+def text_to_story(text, model='gpt-3.5-turbo-instruct', temperature=0.5):
     """
     Generates a short story based on input text by prompting OpenAI's language model.
 
@@ -57,9 +57,7 @@ def text_to_story(text, model='gpt-3.5-turbo-instruct', temperature=0.9):
     prompt = PromptTemplate(
         input_variables = ['text'],
         template = '''
-        You are a talented story teller who can create a story from a simple narrative./
-        Create a story using the following scenario; the story should have be maximum 30 words long.
-        context = {text}
+        You are an assistant for blind people. You must describe the environment, the items and their positions in the environment; Because you are an assistant for blind people, you need to be brief. = {text}
         '''
         )
     chain = LLMChain(llm=llm, prompt=prompt)
@@ -92,7 +90,7 @@ def main():
     """
     Main function to run the Streamlit user interface for the Image-to-Story App.
     """
-    st.set_page_config(page_title= "IMAGE TO STORY CONVERTER", page_icon= "🖼️")
+    st.set_page_config(page_title= "IMAGE TO DESCRIPTION CONVERTER", page_icon= "🖼️")
     st.header("Image-to-Story Converter")
     #file uploader
     file_upload = st.file_uploader("please upload a jpg image here", type="jpg")
