@@ -13,7 +13,6 @@ load_dotenv()
 HUGGINGFACE_KEY = os.getenv('HUGGINGFACE_KEY')
 OPENAI_KEY = os.getenv('OPENAI_TOKEN')
 
-#HUGGINGFACE_KEY = "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" 
 #os.environ["HF_TOKEN"] = HUGGINGFACE_KEY
 #OPENAI_KEY = OpenAI(api_key = 'OPENAI_API_KEY') #ajustar
 
