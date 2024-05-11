@@ -9,14 +9,12 @@ import transformer_utils
 import openai
 #from openai import OpenAI
 load_dotenv()
-#OPENAI_KEY = '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'
 #openai.api_key = os.environ['OPENAI_API_KEY']
 HUGGINGFACE_KEY = os.getenv('HUGGINGFACE_KEY')
 OPENAI_KEY = os.getenv('OPENAI_TOKEN')
 
 #HUGGINGFACE_KEY = "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" 
 #os.environ["HF_TOKEN"] = HUGGINGFACE_KEY
-#openai.api_key = "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"
 #OPENAI_KEY = OpenAI(api_key = 'OPENAI_API_KEY') #ajustar
 
 
